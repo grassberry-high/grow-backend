@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "588a427d617fff11d79b3047",
+    "name": "Main Box",
+    "strains": [],
+    "cycle": "mother",
+    "rules": [
+      "588a427d617fff11d79b3059",
+      "588a427d617fff11d79b3054",
+      "588a427d617fff11d79b3056",
+      "588a427d617fff11d79b3058"
+    ],
+    "displays": [
+      "588a427d617fff11d79b304d"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "588a427d617fff11d79b3066",
+    "relay": {
+      "_id": "588a427d617fff11d79b304e",
+      "label": "Relay I",
+      "name": "LED (right)",
+      "address": 1
+    },
+    "action": "switchOn",
+    "cronPattern": "0 30 7 * * *"
+  },
+  {
+    "_id": "588a427d617fff11d79b3067",
+    "relay": {
+      "_id": "588a427d617fff11d79b304e",
+      "label": "Relay I",
+      "name": "LED (right)",
+      "address": 1
+    },
+    "action": "switchOff",
+    "cronPattern": "0 30 19 * * *"
+  }
+]

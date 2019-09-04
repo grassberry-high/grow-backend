@@ -1,0 +1,9 @@
+[
+  {
+    "_id": "588a410ec109cc11986bf35e",
+    "email": "hello@grassberry-high.com",
+    "lastName": "User",
+    "active": true,
+    "permissionLevel": "autoLogin"
+  }
+]

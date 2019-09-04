@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "588a427d617fff11d79b3066",
+    "relay": "588a427d617fff11d79b304e",
+    "action": "switchOn",
+    "cronPattern": "0 30 7 * * *"
+  },
+  {
+    "_id": "588a427d617fff11d79b3067",
+    "relay": "588a427d617fff11d79b304e",
+    "action": "switchOff",
+    "cronPattern": "0 30 19 * * *"
+  }
+]

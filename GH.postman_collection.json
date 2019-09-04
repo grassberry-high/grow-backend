@@ -1,0 +1,184 @@
+{
+	"info": {
+		"name": "GH",
+		"_postman_id": "22270cc6-e41c-d12f-503a-4b4e2e8c5985",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GTE CHAMBERS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://grassberry.local/getOutputs",
+					"protocol": "http",
+					"host": [
+						"grassberry",
+						"local"
+					],
+					"path": [
+						"getOutputs"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET SENSORS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://grassberry.local/getSensors",
+					"protocol": "http",
+					"host": [
+						"grassberry",
+						"local"
+					],
+					"path": [
+						"getSensors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET RULES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://grassberry.local/getSensors",
+					"protocol": "http",
+					"host": [
+						"grassberry",
+						"local"
+					],
+					"path": [
+						"getSensors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET OUTPUTS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sensorType\": \"waterSensor\",\n\t\"oldAddress\":68,\n\t\"newAddress\":33\n}"
+				},
+				"url": {
+					"raw": "http://grassberry.local/updateI2CAddress",
+					"protocol": "http",
+					"host": [
+						"grassberry",
+						"local"
+					],
+					"path": [
+						"updateI2CAddress"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE I2C ADDRESS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://grassberry.local/getOutputs",
+					"protocol": "http",
+					"host": [
+						"grassberry",
+						"local"
+					],
+					"path": [
+						"getOutputs"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OPERATE OUTPUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"588a427d617fff11d79b3050\",\n\"operation\":\"switchOn\"\n}"
+				},
+				"url": {
+					"raw": "http://grassberry.local/operateOutput",
+					"protocol": "http",
+					"host": [
+						"grassberry",
+						"local"
+					],
+					"path": [
+						"operateOutput"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

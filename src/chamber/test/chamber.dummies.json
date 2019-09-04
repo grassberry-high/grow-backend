@@ -1,0 +1,373 @@
+{
+  "upsertMainBox": {
+    "_id": "588a427d617fff11d79b3047",
+    "name": "Main Box",
+    "cycle": "mother",
+    "strains": [],
+    "rules": [
+      {
+        "_id": "588a427d617fff11d79b3054",
+        "device": "an",
+        "sensor": {
+          "_id": "588a427d617fff11d79b304a",
+          "address": 64,
+          "model": "hdc1000",
+          "detectors": [
+            {
+              "type": "temperature",
+              "label": "Temperature (Right)",
+              "name": "Temperature (Right)",
+              "unit": "C",
+              "_id": "5936580049e76d2bf05223e2"
+            },
+            {
+              "type": "humidity",
+              "label": "Humidity (Right)",
+              "name": "Humidity (Right)",
+              "unit": "RF",
+              "_id": "5936580049e76d2bf05223e1"
+            }
+          ],
+          "__v": 0
+        },
+        "relay": {
+          "_id": "588a427d617fff11d79b304f",
+          "label": "Relay II",
+          "name": "Ventilation (right)",
+          "address": 2,
+          "__v": 0
+        },
+        "forDetector": "temperature",
+        "detectorId": "5954ba2ac72d410b3711837f",
+        "onValue": 30,
+        "offValue": 20,
+        "unit": "C",
+        "__v": 0
+      },
+      {
+        "_id": "588a427d617fff11d79b3056",
+        "device": "fan",
+        "sensor": {
+          "_id": "588a427d617fff11d79b304a",
+          "address": 64,
+          "model": "hdc1000",
+          "detectors": [
+            {
+              "type": "temperature",
+              "label": "Temperature (Right)",
+              "name": "Temperature (Right)",
+              "unit": "C",
+              "_id": "5936580049e76d2bf05223e2"
+            },
+            {
+              "type": "humidity",
+              "label": "Humidity (Right)",
+              "name": "Humidity (Right)",
+              "unit": "RF",
+              "_id": "5936580049e76d2bf05223e1"
+            }
+          ],
+          "__v": 0
+        },
+        "relay": {
+          "_id": "588a427d617fff11d79b304f",
+          "label": "Relay II",
+          "name": "Ventilation (right)",
+          "address": 2,
+          "__v": 0
+        },
+        "forDetector": "humidity",
+        "detectorId": "5954ba2ac72d410b3711837e",
+        "onValue": 70,
+        "offValue": 60,
+        "unit": "RFH",
+        "__v": 0
+      },
+      {
+        "_id": "588a427d617fff11d79b3058",
+        "sensor": {
+          "_id": "588a427d617fff11d79b304b",
+          "address": 33,
+          "model": "chirp",
+          "detectors": [
+            {
+              "type": "water",
+              "label": "Watersensor I",
+              "name": "Watersensor I",
+              "_id": "5936580049e76d2bf05223e3"
+            }
+          ],
+          "__v": 0
+        },
+        "relay": {
+          "_id": "588a427d617fff11d79b3050",
+          "label": "Relay III",
+          "name": "Watering (right)",
+          "address": 3,
+          "__v": 0
+        },
+        "device": "pump",
+        "detectorId": "5954ba2ac72d410b37118381",
+        "forDetector": "water",
+        "durationMSOn": 1000,
+        "__v": 0
+      }
+    ],
+    "light": {
+      "relay": {
+        "_id": "588a427d617fff11d79b304e",
+        "label": "Relay I",
+        "name": "LED (right)",
+        "address": 1,
+        "__v": 0
+      },
+      "durationHOn": 18,
+      "startTime": "2016-11-28T07:30:00.749Z"
+    },
+    "displays": [
+      {
+        "_id": "588a427d617fff11d79b304d",
+        "address": 77,
+        "model": "mhz16",
+        "detectors": [
+          {
+            "type": "co2",
+            "label": "CO2 Sensor",
+            "name": "CO2 Sensor",
+            "_id": "5936580049e76d2bf05223e5"
+          }
+        ],
+        "__v": 0
+      }
+    ],
+    "__v": 0,
+    "activeSensors": [
+      {
+        "_id": "588a427d617fff11d79b304a",
+        "address": 64,
+        "model": "hdc1000",
+        "detectors": [
+          {
+            "type": "temperature",
+            "label": "Temperature (Right)",
+            "name": "Temperature (Right)",
+            "unit": "C",
+            "_id": "5936580049e76d2bf05223e2"
+          },
+          {
+            "type": "humidity",
+            "label": "Humidity (Right)",
+            "name": "Humidity (Right)",
+            "unit": "RF",
+            "_id": "5936580049e76d2bf05223e1"
+          }
+        ],
+        "__v": 0
+      },
+      {
+        "_id": "588a427d617fff11d79b304d",
+        "address": 77,
+        "model": "mhz16",
+        "detectors": [
+          {
+            "type": "co2",
+            "label": "CO2 Sensor",
+            "name": "CO2 Sensor",
+            "_id": "5936580049e76d2bf05223e5"
+          }
+        ],
+        "__v": 0
+      }
+    ],
+    "allRelays": [
+      {
+        "_id": "588a427d617fff11d79b304e",
+        "name": "LED (right)",
+        "device": "light",
+        "state": 1
+      },
+      {
+        "_id": "588a427d617fff11d79b304f",
+        "name": "Ventilation (right)",
+        "device": "fan",
+        "state": 1
+      },
+      {
+        "_id": "588a427d617fff11d79b3050",
+        "name": "Watering (right)",
+        "device": "pump",
+        "state": 0
+      }
+    ]
+  },
+  "upsertedMainBox": {
+    "_id": "588a427d617fff11d79b3047",
+    "name": "Main Box",
+    "cycle": "mother",
+    "strains": [],
+    "rules": [
+      "588a427d617fff11d79b3054",
+      "588a427d617fff11d79b3054",
+      "588a427d617fff11d79b3054"
+    ],
+    "displays": ["588a427d617fff11d79b304d"]
+  },
+  "readMainBox": {
+    "_id": "588a427d617fff11d79b3047",
+    "name": "Main Box",
+    "cycle": "mother",
+    "__v": 0,
+    "strains": [],
+    "rules": [
+      "588a427d617fff11d79b3054",
+      "588a427d617fff11d79b3056",
+      "588a427d617fff11d79b3058"
+    ],
+    "light": {
+      "relay": "588a427d617fff11d79b304e",
+      "durationHOn": 18,
+      "startTime": "2016-11-28T07:30:00.749Z"
+    },
+    "displays": ["588a427d617fff11d79b304d"],
+    "activeSensors": [],
+    "allRelays": [],
+    "cronjobs": []
+  },
+  "getChambers": [
+    {
+      "_id": "588a427d617fff11d79b3047",
+      "activeSensors": [],
+      "allRelays": [
+        {
+          "_id": "588a427d617fff11d79b304f",
+          "device": "fan",
+          "name": "Ventilation (right)",
+          "state": 0
+        },
+        {
+          "_id": "588a427d617fff11d79b3050",
+          "device": "pump",
+          "name": "Watering (right)",
+          "state": 0
+        }
+      ],
+      "cycle": "mother",
+      "displays": [
+        {
+          "_id": "588a427d617fff11d79b304d",
+          "address": 77,
+          "detectors": [
+            {
+              "_id": "5bc45695d557b57ae40e9501",
+              "label": "CO2 Sensor (77)",
+              "name": "CO2 Sensor",
+              "type": "co2"
+            }
+          ],
+          "model": "mhz16",
+          "technology": "i2c"
+        }
+      ],
+      "name": "Main Box",
+      "rules": [
+        {
+          "2": 0,
+          "_id": "588a427d617fff11d79b3054",
+          "cronjobs": [],
+          "detectorId": "5bc45695d557b57ae40e94fe",
+          "device": "fan",
+          "forDetector": "temperature",
+          "offValue": 20,
+          "onValue": 30,
+          "relay": "588a427d617fff11d79b304f",
+          "sensor": {
+            "_id": "588a427d617fff11d79b304a",
+            "address": 64,
+            "detectors": [
+              {
+                "_id": "5bc45695d557b57ae40e94fe",
+                "label": "Temperature (64)",
+                "name": "Temperature (Right)",
+                "type": "temperature",
+                "unit": "C"
+              },
+              {
+                "_id": "5bc45695d557b57ae40e94fd",
+                "label": "Humidity (64)",
+                "name": "Humidity (Right)",
+                "type": "humidity",
+                "unit": "RF"
+              }
+            ],
+            "model": "hdc1000",
+            "technology": "i2c"
+          },
+          "trigger": "thresholdOnOff",
+          "unit": "C"
+        },
+        {
+          "2": 0,
+          "_id": "588a427d617fff11d79b3056",
+          "cronjobs": [],
+          "detectorId": "5bc45695d557b57ae40e94fd",
+          "device": "fan",
+          "forDetector": "humidity",
+          "offValue": 60,
+          "onValue": 70,
+          "relay": "588a427d617fff11d79b304f",
+          "sensor": {
+            "_id": "588a427d617fff11d79b304a",
+            "address": 64,
+            "detectors": [
+              {
+                "_id": "5bc45695d557b57ae40e94fe",
+                "label": "Temperature (64)",
+                "name": "Temperature (Right)",
+                "type": "temperature",
+                "unit": "C"
+              },
+              {
+                "_id": "5bc45695d557b57ae40e94fd",
+                "label": "Humidity (64)",
+                "name": "Humidity (Right)",
+                "type": "humidity",
+                "unit": "RF"
+              }
+            ],
+            "model": "hdc1000",
+            "technology": "i2c"
+          },
+          "trigger": "thresholdOnOff",
+          "unit": "RFH"
+        },
+        {
+          "2": 0,
+          "_id": "588a427d617fff11d79b3058",
+          "cronjobs": [],
+          "detectorId": "5bc45695d557b57ae40e94ff",
+          "device": "pump",
+          "durationMSOn": 1000,
+          "forDetector": "water",
+          "onValue": 1,
+          "relay": "588a427d617fff11d79b3050",
+          "sensor": {
+            "_id": "588a427d617fff11d79b304b",
+            "address": 33,
+            "detectors": [
+              {
+                "_id": "5bc45695d557b57ae40e94ff",
+                "label": "Watersensor (33)",
+                "name": "Watersensor (33)",
+                "type": "water"
+              }
+            ],
+            "model": "chirp",
+            "technology": "i2c"
+          },
+          "trigger": "thresholdTimer"
+        }
+      ],
+      "strains": []
+    }
+  ]
+}

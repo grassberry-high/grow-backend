@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "588a427d617fff11d79b304e",
+    "label": "Relay I",
+    "name": "LED (right)",
+    "address": 1
+  },
+  {
+    "_id": "588a427d617fff11d79b304f",
+    "label": "Relay II",
+    "name": "Ventilation (right)",
+    "address": 2
+  },
+  {
+    "_id": "588a427d617fff11d79b3050",
+    "label": "Relay III",
+    "name": "Watering (right)",
+    "address": 3
+  },
+  {
+    "_id": "588a427d617fff11d79b3051",
+    "label": "Relay IV",
+    "name": "CFL 2X (left)",
+    "address": 4
+  },
+  {
+    "_id": "588a427d617fff11d79b3052",
+    "label": "Relay V",
+    "name": "Ventilation (left)",
+    "address": 5
+  },
+  {
+    "_id": "588a427d617fff11d79b3053",
+    "label": "Relay VI",
+    "name": "Watering (left)",
+    "address": 6
+  },
+  {
+    "_id": "588a427d617fff11d79b3054",
+    "label": "Relay VII",
+    "name": "CO2 Valve",
+    "address": 7
+  },
+  {
+    "_id": "588a427d617fff11d79b3055",
+    "label": "Relay VIII",
+    "name": "Humiditor",
+    "address": 8
+  }
+]

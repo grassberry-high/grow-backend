@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "588a427d617fff11d79b3059",
+    "device": "light",
+    "trigger": "timeOnOff",
+    "relay": "588a427d617fff11d79b304e",
+    "startTime": "2016-11-28T07:30:00.749Z",
+    "durationHOn": 18,
+    "cronjobs": [
+      "588a427d617fff11d79b3066",
+      "588a427d617fff11d79b3067"
+    ]
+  },
+  {
+    "_id": "588a427d617fff11d79b3054",
+    "device": "fan",
+    "trigger": "thresholdOnOff",
+    "sensor": "588a427d617fff11d79b304a",
+    "detectorId": "5bc45695d557b57ae40e94fe",
+    "relay": "588a427d617fff11d79b304f",
+    "forDetector": "temperature",
+    "onValue": 30.00,
+    "offValue": 20.00,
+    "unit": "C"
+  },
+  {
+    "_id": "588a427d617fff11d79b3055",
+    "device": "fan",
+    "trigger": "thresholdOnOff",
+    "sensor": "588a427d617fff11d79b304a",
+    "detectorId": "5bc45695d557b57ae40e94fe",
+    "relay": "588a427d617fff11d79b304f",
+    "forDetector": "temperature",
+    "onValue": 10.00,
+    "offValue": 20.00,
+    "unit": "C"
+  },
+  {
+    "_id": "588a427d617fff11d79b3056",
+    "device": "fan",
+    "trigger": "thresholdOnOff",
+    "sensor": "588a427d617fff11d79b304a",
+    "detectorId": "5bc45695d557b57ae40e94fd",
+    "relay": "588a427d617fff11d79b304f",
+    "forDetector": "humidity",
+    "onValue": 70.00,
+    "offValue": 60.00,
+    "unit": "RFH"
+  },
+  {
+    "_id": "588a427d617fff11d79b3058",
+    "device": "pump",
+    "trigger": "thresholdTimer",
+
+    "sensor": "588a427d617fff11d79b304b",
+    "detectorId": "5bc45695d557b57ae40e94ff",
+    "relay": "588a427d617fff11d79b3050",
+    "forDetector": "water",
+    "onValue": 1,
+    "durationMSOn": 1000
+  }
+]

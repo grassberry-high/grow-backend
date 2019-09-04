@@ -1,0 +1,10 @@
+{
+    "exclude": [
+      "**/mocha/**/*",
+      "**/*.test.js",
+      "**/*.mock.js",
+      "**/*.model.js",
+      "**/rest.helper*.js",
+      "**/database.helper.js"
+    ]
+}

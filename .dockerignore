@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+docker-compose.yml
+.env
+.test.env
+readme.md
+*.DS_Store
