@@ -51,6 +51,7 @@
     "socket.io": "^2.2.0",
     "split": "^1.0.1",
     "stream-buffers": "^3.0.2",
+    "tar": "^4.4.10",
     "util": "^0.10.4",
     "winston": "^3.2.1",
     "winston-mongodb": "^5.0.0"
