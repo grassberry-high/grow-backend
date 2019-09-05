@@ -91,6 +91,13 @@ const setupServer = (callback) => {
     debugBoot('Server running at http://localhost:' + port);
     callback();
   });
+
+  process.on('SIGTERM', () => {
+    console.log('Received SIGTERM shutting down');
+    server.close( () => {
+      process.exit(0);
+    });
+  });
 };
 
 // =========================================== main ===========================================
