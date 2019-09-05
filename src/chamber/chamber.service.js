@@ -10,6 +10,7 @@ const moment = require('moment');
 const {uniqBy, omit, cloneDeep} = require('lodash');
 
 const {ChamberModel} = require('./chamber.model');
+const {RuleModel} = require('../rule/rule.model');
 
 const {sensorRegistered} = require('../sensor/sensor.service.js');
 const {getRelayState} = require('../relay/relay.service.js');
@@ -112,6 +113,7 @@ exports.addRules = (rules, callback) => {
   const rulesIds = [];
   async.eachSeries(rules,
     (ruleToUpsert, next) => {
+      ruleToUpsert = new RuleModel(ruleToUpsert);
       delete ruleToUpsert.__v;
       debugChamberSetup('\nruleToUpsert: before', ruleToUpsert);
       if (ruleToUpsert.onValue != null) {
@@ -162,10 +164,10 @@ exports.addCronjobs = (rule, callback) => {
     const onPattern = [moment(rule.startTime).seconds(), moment(rule.startTime).minutes(), moment(rule.startTime).hours(), '*', '*', '*'].join(' ');
     debugChamberSetup('rule.durationHOn', rule.durationHOn, ` ${moment(rule.startTime).add(rule.durationHOn, 'hours').hours()} ${moment(rule.startTime).hours()}`);
     const offPattern = [moment(rule.startTime).seconds(), moment(rule.startTime).minutes(), moment(rule.startTime).add(rule.durationHOn, 'hours').hours(), '*', '*', '*'].join(' ');
-    cronjobs.push({relay: rule.relay, action: 'switchOn', cronPattern: onPattern});
-    cronjobs.push({relay: rule.relay, action: 'switchOff', cronPattern: offPattern});
+    cronjobs.push({ruleId: rule._id, relay: rule.relay, action: 'switchOn', cronPattern: onPattern});
+    cronjobs.push({ruleId: rule._id, relay: rule.relay, action: 'switchOff', cronPattern: offPattern});
   } else if (rule.trigger === 'interval' && rule.onPattern) {
-    cronjobs.push({relay: rule.relay, action: 'switchOn', cronPattern: rule.onPattern});
+    cronjobs.push({ruleId: rule._id, relay: rule.relay, action: 'switchOn', cronPattern: rule.onPattern});
   } else {
     return callback(null, []);
   }

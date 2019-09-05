@@ -51,7 +51,7 @@ exports.afterCurrentTime = (isotime) => {
 exports.bootStatus = (cronjobs) => {
   // always two cronjobs per light in a chamber on & off
   const grouped = {};
-  cronjobs.forEach( (cronjob) => {
+  cronjobs.forEach((cronjob) => {
     if (!grouped[cronjob.relay._id]) {
       grouped[cronjob.relay._id] = {};
     }
@@ -73,7 +73,7 @@ exports.bootStatus = (cronjobs) => {
           // off is before on trigger, on time is reached, off not: |ON|OFF*|ON* or OFF*|ON*
         } else if (!offGreaterOn && this.afterCurrentTime(grouped[relayId].switchOn)) {
           debugBoot(`Switching on/off, off: ${grouped[relayId].switchOff.format('HH:mm')} on: ${grouped[relayId].switchOn.format('HH:mm')}`);
-          debugBoot(`Off before on ${grouped[relayId].switchOff.diff(grouped[relayId].switchOn, 'seconds') < 0 }`);
+          debugBoot(`Off before on ${grouped[relayId].switchOff.diff(grouped[relayId].switchOn, 'seconds') < 0}`);
           debugBoot(`On is after current: ${this.afterCurrentTime(grouped[relayId].switchOn)}`);
           action = 'switchOn';
         } else {
@@ -127,7 +127,7 @@ exports.launchCronjobs = (callback) =>
     }
     debugBoot(`Found ${cronjobsFound.length}`);
     this.bootStatus(cronjobsFound);
-    cronjobsFound.forEach( (cronjob) => {
+    cronjobsFound.forEach((cronjob) => {
       debugCronjobs(`Launching for relay ${cronjob.relay}, ${cronjob.cronPattern} ${cronjob.action}`);
       const newCronjob = new CronJob(cronjob.cronPattern,
         this.getCronFunction(cronjob),
@@ -176,7 +176,16 @@ exports.createCronjob = (cronjob, callback) => {
  */
 exports.upsertCronjob = (cronjob, callback) => {
   cronjob = new CronjobModel(cronjob);
-  CronjobModel.findOneAndUpdate({_id: cronjob._id}, cronjob, {
+  const filter = {
+    $or: [
+      {_id: cronjob._id},
+      {
+        ruleId: cronjob.ruleId,
+        action: cronjob.action, // to overwrite only one cronjob on/off
+      },
+    ],
+  };
+  CronjobModel.findOneAndUpdate(filter, cronjob, {
     upsert: true,
     new: true,
   }, callback);

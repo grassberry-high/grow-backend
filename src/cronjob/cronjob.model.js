@@ -10,6 +10,7 @@ const CronjobSchema = new mongoose.Schema({
   },
   action: String,
   cronPattern: String,
+  ruleId: ObjectId,
 });
 
 let CronjobModel;
