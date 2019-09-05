@@ -353,6 +353,7 @@ class Sensor {
       filter: {
         sensor: this._id,
         forDetector: detector.type,
+        trigger: {$in: ['thresholdOnOff', 'thresholdTimer']}, // restricted rules to current implementation, TODO: rebuild rule system for diff. rule types
       },
     };
     getRules(options, (err, rulesFound) => {
