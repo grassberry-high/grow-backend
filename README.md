@@ -10,7 +10,7 @@ In case you need personal assistance you can either use:
 
 You are missing some feature? There are three ways to create new features:
 
-- Contribute, read our [contribution guidelines](./contributing.md)
+- Contribute, read our [contribution guidelines](docs/contributing.md)
 - Find someone to code it for you, (a [bounty](https://www.bountysource.com/) might help)
 - Support development via the official [Patreon Campaign](https://www.patreon.com/grassberry)
 
