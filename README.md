@@ -100,6 +100,9 @@ Follow the instructions here:
 
 ..6. Write comments, readme if something is not 100% self explaining
 
+# Debugging
+[Remote debugging tutorial](docs/debug.md)
+
 # License
 The project is licensed under MIT license.
 By using/contributing to the project you accept the [license](https://github.com/360disrupt/grassberry-high/blob/master/LICENSE).

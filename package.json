@@ -75,7 +75,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "debug": "echo 'For debugging in Chrome open: about:inspect' && nodemon --inspect-brk src/index.js",
+    "debug": "echo 'For debugging in Chrome open: about:inspect' && nodemon --inspect-brk index.js",
+    "debugDocker": "echo 'For debugging in Chrome open: about:inspect' && node --inspect-brk=0.0.0.0 index.js",
+    "debugTunnel": "ssh -L 9221:localhost:9229 pi@grassberry.local",
     "test": "nyc mocha",
     "testCI": "nyc mocha --exit",
     "dockerBuildDev": "docker build --no-cache --tag grassberry/grassberry_core:development .",
