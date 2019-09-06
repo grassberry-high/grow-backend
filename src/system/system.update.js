@@ -1,7 +1,7 @@
 'use strict';
 const CRONJOB_LICENSE_PATTERN = '0 0 0 * * *';
 
-const debugSystem = require('debug')('system');
+const debugSystemUpdate = require('debug')('system:update');
 
 
 const async = require('async');
@@ -64,11 +64,11 @@ const getLicenseInformation = (options, callback) =>
       const method = 'GET';
       const url = `${apiEndpoints['licenses']}/${encodeURIComponent(serial)}`;
       const data = {};
-      debugSystem(`getting license for serial ${serial} from ${url}`);
+      debugSystemUpdate(`getting license for serial ${serial} from ${url}`);
       emit(method, url, data, (err, license) => next(err, serial, license));
     },
     (serial, license, next) => {
-      debugSystem('License', license);
+      debugSystemUpdate('License', license);
       if (!license.payload || !license.payload.enabledFeatures) {
         return next();
       }
@@ -77,6 +77,7 @@ const getLicenseInformation = (options, callback) =>
         serial,
         lastConnect: moment(),
       };
+      debugSystemUpdate('Updating system', licenseData);
       SystemModel.findOneAndUpdate({}, licenseData, {upsert: true}).exec((err) => {
         return next(err, licenseData);
       });

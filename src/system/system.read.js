@@ -1,4 +1,6 @@
 'use strict';
+const debugSystemRead = require('debug')('system:read');
+
 const moment = require('moment');
 
 const {SystemModel} = require('./system.model');
@@ -9,6 +11,7 @@ const getSystem = (options, callback) => {
     if (err) {
       return callback(err);
     }
+    debugSystemRead('Found system info', system);
     return callback(null, system);
   });
 };
