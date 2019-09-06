@@ -37,8 +37,8 @@ class ChirpSensor extends Sensor {
         if (err) {
           return callback(err);
         }
-        that.readSensor();
-        return callback(null, that);
+        this.readSensor();
+        return callback(null, this);
       });
     });
   }
