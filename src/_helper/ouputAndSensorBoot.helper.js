@@ -12,6 +12,8 @@ const {bootSensors} = require('../sensor/sensor.service.js');
 const {stopCronjobs, launchCronjobs} = require('../cronjob/cronjob.service.js');
 const i2cService = require('../i2c/i2c.js');
 
+let watchActive = false;
+
 /**
  * Boot all sensors and relays
  * @param {object} options
@@ -48,11 +50,14 @@ const bootSensorsAndRelays = (options, callback) =>
   },
   (err) => {
     if (err) return callback(err);
-    watch();
+    if (!watchActive) {
+      watch();
+    }
     return callback(null);
   });
 
 const watch = () => {
+  watchActive = true;
   setInterval(() => i2cService.checkDifference((err, result) => {
     if (result) {
       const {differenceAdded, differenceLost} = result;
