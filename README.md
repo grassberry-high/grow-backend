@@ -100,6 +100,8 @@ Follow the instructions here:
 
 ..6. Write comments, readme if something is not 100% self explaining
 
+..7. SignOff your commits with `git commit --signoff`
+
 # Debugging
 [Remote debugging tutorial](docs/debug.md)
 
