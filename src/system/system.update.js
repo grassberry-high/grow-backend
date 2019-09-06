@@ -69,11 +69,11 @@ const getLicenseInformation = (options, callback) =>
     },
     (serial, license, next) => {
       debugSystemUpdate('License', license);
-      if (!license.payload || !license.payload.enabledFeatures) {
+      if (!license.payload) {
         return next();
       }
       const licenseData = {
-        enabledFeatures: license.payload.enabledFeatures,
+        enabledFeatures: license.payload.enabledFeatures || {},
         serial,
         lastConnect: moment(),
       };
