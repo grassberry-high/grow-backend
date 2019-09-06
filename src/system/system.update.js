@@ -72,13 +72,16 @@ const getLicenseInformation = (options, callback) =>
       if (!license.payload || !license.payload.enabledFeatures) {
         return next();
       }
-      SystemModel.findOneAndUpdate({}, {
+      const licenseData = {
         enabledFeatures: license.payload.enabledFeatures,
         serial,
         lastConnect: moment(),
-      }, {upsert: true}).exec(next);
+      };
+      SystemModel.findOneAndUpdate({}, licenseData, {upsert: true}).exec((err) => {
+        return next(err, licenseData);
+      });
     },
-  ], (err) => callback(err))
+  ], (err, licenseData) => callback(err, licenseData))
 ;
 
 // --------------------------- Settings Updates -----------------------------

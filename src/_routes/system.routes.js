@@ -23,11 +23,11 @@ const routes = (app) => {
 
   app.get('/core/getLicenseInformation', routesService.clean, (req, res) => {
     const options = req.params.options || {};
-    getLicenseInformation(options, (err) => {
+    getLicenseInformation(options, (err, licenseData) => {
       if (err) {
         return res.status(BAD_REQUEST).json({userErr: err});
       }
-      res.json({success: true});
+      res.json(licenseData);
     });
   });
 
