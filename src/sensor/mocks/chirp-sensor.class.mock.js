@@ -22,11 +22,9 @@ class ChirpSensorMock extends SensorMock {
   // eslint-disable-next-line constructor-super
   constructor(options, callback) {
     debugSensorChrip(`Chirp sensor mock ${options._id}`);
-    super(options, (err) => {
-      if (err) {
-        return callback(err);
-      }
-      async.eachSeries(this.detectors,
+    async.series([
+      (next) => super(options, next),
+      (next) => async.eachSeries(this.detectors,
         (detector, next) => {
           detector.min = 1;
           detector.max = 2;
@@ -35,31 +33,11 @@ class ChirpSensorMock extends SensorMock {
           this.seedSensor(detector, HISTORY_LENGTH, null, () =>
             this.boot((err) => {
               this.readSensor();
-              return next(err);
+              return next(err, this);
             })
           );
-        },
-        callback(null, this));
-    });
-
-    // async.series([
-    //   (next) => super(options, next),
-    //   (next) => {
-    //     async.eachSeries(this.detectors,
-    //       (detector, next) => {
-    //         detector.min = 1;
-    //         detector.max = 2;
-    //         detector.round = true;
-    //         detector.change = 10;
-    //         this.seedSensor(detector, HISTORY_LENGTH, null, () =>
-    //           this.boot((err) => {
-    //             this.readSensor();
-    //             return next(err);
-    //           })
-    //         );
-    //       },
-    //       next(null, this));
-    //   }], callback);
+        }, next),
+    ], callback);
   };
 
   /**
