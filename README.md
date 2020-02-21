@@ -1,5 +1,11 @@
 Grassberry High is an environmental controller for your home grow project. This repository contains the code for the backend Node.js server. Grassberry High is an open source software project. All contributions and the support is community based.
 
+## Announcement
+
+I'm working on a new release for the backend with major changes: [Excalibur](https://github.com/grassberry-high/grow-backend-excalibur). It will work with nest.js, have more test coverage, utilizies a lot of code quality tools and uses rxjs and events to resolve sensor events and apply rules. 
+
+It may take some time as my time is very limited. If you want to join the development I will give you my full support.
+
 # Help
 If you find any bugs, please use the issue tracker. 
 
