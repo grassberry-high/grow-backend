@@ -1,5 +1,9 @@
 Grassberry High is an environmental controller for your home grow project. This repository contains the code for the backend Node.js server. Grassberry High is an open source software project. All contributions and the support is community based.
 
+# IMPORTANT NOTICE / PROJECT STATUS
+
+**I realized that I don't have the time and energy to develop this project in my free time further. I will still support the project as a maintainer, with guidance and support. But this project needs active developers and further maintainers! I cannot provide enough time to fix all bugs or add additional features at the moment.**
+
 # Help
 If you find any bugs, please use the issue tracker. 
 
