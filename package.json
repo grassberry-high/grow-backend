@@ -7,7 +7,7 @@
     "@types/mongoose": "^5.3.5",
     "@types/node": "^10.12.18",
     "archiver": "^2.1.1",
-    "async": "^2.6.1",
+    "async": "^2.6.4",
     "bcrypt": "^3.0.2",
     "blocked": "^1.2.1",
     "bluebird": "^3.5.3",
