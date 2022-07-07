@@ -30,7 +30,7 @@
     "kalmanjs": "^1.0.0-beta",
     "lodash": "^4.17.14",
     "mkdirp": "^0.5.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.23",
     "mongo-sanitize": "^1.0.1",
     "mongoose": "^5.6.6",
